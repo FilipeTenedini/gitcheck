@@ -1,6 +1,6 @@
 #!/bin/bash
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
-REGEX="^(master|main|feature|bugfix|release|hotfix)($|\/[a-z0-9]+(-[a-z0-9]+)*)$"
+REGEX="^(master|main|feature|bug-fix|hot-fix|refactor|types|lint|chore)($|\/[a-z0-9]+(-[a-z0-9]+)*)$"
 
 if ! [[ $BRANCH =~ $REGEX ]]; then
   echo "Seu commit foi rejeitado pois não segue os padrões definidos pela equipe."
